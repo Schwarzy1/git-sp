@@ -1,0 +1,21 @@
+#!/bin/bash
+
+while getopts 'A' flag; do
+	aflag='true'
+done
+
+if test "$#" -lt 1 
+then
+	echo "Aborting due to empty commit message"
+else
+	branch=$(git rev-parse --abbrev-ref HEAD)
+	if test $aflag 
+	then
+		message=$2
+		git commit -am "$message"
+	else
+		message=$1
+		git commit -m "$message"
+	fi
+	git push origin $branch
+fi
