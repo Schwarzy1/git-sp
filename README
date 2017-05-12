@@ -2,13 +2,12 @@ git-sp
 ======
 
 Git-sp is a script for simplifying the task of adding, commiting, and pushing
-with git. sp stands for "Simple push". It is meant to streamline pushing
-rapid, minor changes, with simple messages such as "minor review change". 
+with git. sp stands for "simple push". It is meant to streamline pushing
+minor changes, with simple messages such as "minor review change". 
 Therefore, git-sp only allows for one of the many flags git-commit and
 git-push allow. 
 
-By use of git-sp, time and keypresses
-are saved. For example, instead of this:
+By use of git-sp, time and keypresses are saved. For example, instead of this:
 
 ------------------------------
 git commit -m "message"
@@ -34,7 +33,7 @@ To use git-sp, place git-sp in your PATH and invoke it like this:
 git sp "message"
 
 # stage all changed files for commit, and then commit and push them
-git sp -A "message"
+git sp -a "message"
 
 -------------------------------------------------------------------
 
@@ -47,4 +46,5 @@ commands to commit and push changed files. While git-add, git-commit, and
 git-push all have many different settings, git-sp is intended to be
 extremely simple. Git-sp requires a simple, commandline commit message,
 and will only push to the current working branch on origin. Might add
-ability to specify repo in the future. Might change -A flag to add untracked files (git commit -a does not).  
+ability to specify repo in the future. Might change -a flag to add untracked
+files (git commit -a does not).  
