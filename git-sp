@@ -1,5 +1,13 @@
 #!/bin/sh
 
+usage(){
+	echo "usage: git sp [-a] <message>
+Commits and pushes to current branch on origin.
+To also run 'git add -A', use '-a' flag."
+	exit 1
+}
+
+
 # -a should trigger `git add -A`
 while getopts 'a' flag; do
 	aflag='true'
@@ -7,7 +15,7 @@ done
 
 if test "$#" -lt 1 
 then
-	echo "Aborting due to empty commit message"
+	usage
 else
 	branch=$(git rev-parse --abbrev-ref HEAD)
 	if test $aflag 
