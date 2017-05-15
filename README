@@ -32,7 +32,7 @@ To use git-sp, place git-sp in your PATH and invoke it like this:
 # commit and push files staged for commit
 git sp "message"
 
-# stage all changed files for commit, and then commit and push them
+# stage all files for commit, and then commit and push them
 git sp -a "message"
 
 -------------------------------------------------------------------
@@ -46,5 +46,4 @@ commands to commit and push changed files. While git-add, git-commit, and
 git-push all have many different settings, git-sp is intended to be
 extremely simple. Git-sp requires a simple, commandline commit message,
 and will only push to the current working branch on origin. Might add
-ability to specify repo in the future. Might change -a flag to add untracked
-files (git commit -a does not).  
+ability to specify repo in the future.  
