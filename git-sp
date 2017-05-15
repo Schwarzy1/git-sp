@@ -4,7 +4,7 @@ usage(){
 	echo "usage: git sp [-a] <message>
 
 	Commits and pushes to current branch on origin.
-	-a 	Run 'git add -A' prior to committing."
+	-a 	Run 'git add -A' prior to committing.
 	exit 1
 }
 
