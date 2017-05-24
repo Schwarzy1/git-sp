@@ -1,10 +1,20 @@
-#!/bin/sh
+#!/usr/bin/env bash
+#
+# Author: A. Schwarz
+# Usage: git sp [-a] <message>
+#
+# "Simple push": commit with message and push. Use -a flag to add changed files
+#    to commit. 
+#
+# See https://github.com/Schwarzy1/git-sp for more information.
+#
+
 
 usage(){
 	echo "usage: git sp [-a] <message>
 
-	Commits and pushes to current branch on origin.
-	-a 	Run 'git add -A' prior to committing.
+	Commits and pushes to current working branch.
+	-a 	Run 'git add -A' prior to committing."
 	exit 1
 }
 
@@ -18,7 +28,6 @@ if test "$#" -lt 1
 then
 	usage
 else
-	branch=$(git rev-parse --abbrev-ref HEAD)
 	if test $aflag 
 	then
 		git add -A
@@ -26,5 +35,5 @@ else
 	else
 		git commit -m "$1"
 	fi
-	git push origin $branch
+	git push 
 fi
