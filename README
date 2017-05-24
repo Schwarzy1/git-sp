@@ -45,5 +45,4 @@ This script is intended to solve the problem of having to type multiple
 commands to commit and push changed files. While git-add, git-commit, and
 git-push all have many different settings, git-sp is intended to be
 extremely simple. Git-sp requires a simple, commandline commit message,
-and will only push to the current working branch on origin. Might add
-ability to specify repo in the future.  
+and will only push to the current working branch.  
