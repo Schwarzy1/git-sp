@@ -19,15 +19,15 @@ usage(){
 }
 
 
-# -a should trigger `git add -A`
-while getopts 'a' flag; do
-	aflag='true'
-done
-
 if test "$#" -lt 1 
 then
 	usage
 else
+	# -a should trigger `git add -A`
+	while getopts 'a' flag; do
+		aflag='true'
+	done
+
 	if test $aflag 
 	then
 		git add -A
