@@ -26,7 +26,7 @@ done
 
 if test "$#" -lt 1 
 then
-	usage
+	git commit -m "fixup"
 else
 	if test $aflag 
 	then
