@@ -27,6 +27,7 @@ done
 if test "$#" -lt 1 
 then
 	git commit -m "fixup"
+	git push
 else
 	if test $aflag 
 	then
