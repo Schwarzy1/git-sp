@@ -29,7 +29,10 @@ Using git-sp
 To use git-sp, place git-sp in your PATH and invoke it like this:
 
 -------------------------------------------------------------------
-# commit and push files staged for commit
+# commit and push files staged for commit with message "fixup"
+git sp
+
+# commit and push files staged for commit with custom message
 git sp "message"
 
 # stage all files for commit, and then commit and push them
@@ -44,5 +47,4 @@ Limitations:
 This script is intended to solve the problem of having to type multiple
 commands to commit and push changed files. While git-add, git-commit, and
 git-push all have many different settings, git-sp is intended to be
-extremely simple. Git-sp requires a simple, commandline commit message,
-and will only push to the current working branch.  
+extremely simple. Git-sp will only push to the current working branch.
